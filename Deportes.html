@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados Deportivos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .competition {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .competition-header {
+            background: #003366;
+            color: white;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .match {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .team {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+
+        .team-logo {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+        }
+
+        .team-name {
+            font-size: 14px;
+        }
+
+        .score {
+            font-weight: bold;
+            font-size: 16px;
+            padding: 0 20px;
+        }
+
+        .match-status {
+            background: #dc3545;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin: 0 10px;
+        }
+
+        .match-time {
+            color: #666;
+            font-size: 12px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Champions League -->
+        <div class="competition">
+            <div class="competition-header">UEFA Champions League</div>
+            <div class="match">
+                <div class="team">
+                    <img src="https://api.sofascore.app/api/v1/team/2817/image" alt="Bayern" class="team-logo">
+                    <span class="team-name">Bayern Múnich</span>
+                </div>
+                <div class="score">3 - 0</div>
+                <div class="team">
+                    <img src="https://api.sofascore.app/api/v1/team/2697/image" alt="Lazio" class="team-logo">
+                    <span class="team-name">Lazio</span>
+                </div>
+                <span class="match-status">Finalizado</span>
+            </div>
+        </div>
+
+        <!-- Copa Libertadores -->
+        <div class="competition">
+            <div class="competition-header">CONMEBOL Libertadores</div>
+            <div class="match">
+                <div class="team">
+                    <img src="https://api.sofascore.app/api/v1/team/6051/image" alt="Iquique" class="team-logo">
+                    <span class="team-name">Deportes Iquique</span>
+                </div>
+                <div class="score">0 - 0</div>
+                <div class="team">
+                    <img src="https://api.sofascore.app/api/v1/team/2682/image" alt="Alianza" class="team-logo">
+                    <span class="team-name">Alianza Lima</span>
+                </div>
+                <span class="match-status">1er Tiempo</span>
+            </div>
+        </div>
+
+        <!-- Copa de la Liga Argentina -->
+        <div class="competition">
+            <div class="competition-header">Copa de la Liga Profesional Argentina</div>
+            <div class="match">
+                <div class="team">
+                    <img src="https://api.sofascore.app/api/v1/team/3297/image" alt="Estudiantes" class="team-logo">
+                    <span class="team-name">Estudiantes LP</span>
+                </div>
+                <div class="score">- - -</div>
+                <div class="team">
+                    <img src="https://api.sofascore.app/api/v1/team/3306/image" alt="Barracas" class="team-logo">
+                    <span class="team-name">Barracas Central</span>
+                </div>
+                <span class="match-status">Suspendido</span>
+            </div>
+        </div>
+
+        <!-- NBA -->
+        <div class="competition">
+            <div class="competition-header">NBA</div>
+            <div class="match">
+                <div class="team">
+                    <img src="https://api.sofascore.app/api/v1/team/5015/image" alt="Celtics" class="team-logo">
+                    <span class="team-name">Boston Celtics</span>
+                </div>
+                <div class="score">116 - 102</div>
+                <div class="team">
+                    <img src="https://api.sofascore.app/api/v1/team/5003/image" alt="76ers" class="team-logo">
+                    <span class="team-name">Philadelphia 76ers</span>
+                </div>
+                <span class="match-status">Finalizado</span>
+            </div>
+        </div>
+
+        <!-- Eurocup -->
+        <div class="competition">
+            <div class="competition-header">Eurocup</div>
+            <div class="match">
+                <div class="team">
+                    <img src="https://api.sofascore.app/api/v1/team/3543/image" alt="Paris" class="team-logo">
+                    <span class="team-name">Paris Basketball</span>
+                </div>
+                <div class="score">81 - 81</div>
+                <div class="team">
+                    <img src="https://api.sofascore.app/api/v1/team/3544/image" alt="London" class="team-logo">
+                    <span class="team-name">London Lions</span>
+                </div>
+                <span class="match-status">PRÓRROGA</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
