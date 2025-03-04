@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precio del Dólar - lared809.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: #b3cde0;
+            color: #333;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #9cc0d3;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .exchange-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .exchange-title {
+            color: #003366;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .exchange-rate {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .rate-box {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .rate-label {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .rate-value {
+            font-size: 2rem;
+            color: #004080;
+            font-weight: bold;
+        }
+
+        .update-time {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .bank-rates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .bank-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .bank-name {
+            color: #003366;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #0047ab;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .exchange-rate {
+                flex-direction: column;
+            }
+
+            .rate-box {
+                width: 100%;
+            }
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #b3cde0;
+            color: #333;
+        }
+
+        .site-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .page-title {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="site-logo">lared809.com</a>
+            <h1 class="page-title">Precio del Dólar</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Loterias.html">Loterías</a></li>
+                <li><a href="Deportes.html">Deportes</a></li>
+                <li><a href="Cine.html">Cine</a></li>
+                <li><a href="Precio del dolar.html">Precio del Dólar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="exchange-card">
+            <h2 class="exchange-title">Tipo de Cambio USD/DOP</h2>
+            <div class="exchange-rate">
+                <div class="rate-box">
+                    <p class="rate-label">Compra</p>
+                    <p class="rate-value" id="tasa-compra">56.85</p>
+                </div>
+                <div class="rate-box">
+                    <p class="rate-label">Venta</p>
+                    <p class="rate-value" id="tasa-venta">57.40</p>
+                </div>
+            </div>
+            <p class="update-time" id="ultima-actualizacion">Última actualización: 4 de marzo, 2024 10:00 AM</p>
+        </div>
+
+        <div class="bank-rates">
+            <div class="bank-card" id="banco-popular">
+                <h3 class="bank-name">Banco Popular</h3>
+                <p>Compra: <span class="compra">56.80</span></p>
+                <p>Venta: <span class="venta">57.35</span></p>
+            </div>
+
+            <div class="bank-card" id="banreservas">
+                <h3 class="bank-name">BanReservas</h3>
+                <p>Compra: <span class="compra">56.85</span></p>
+                <p>Venta: <span class="venta">57.40</span></p>
+            </div>
+
+            <div class="bank-card">
+                <h3 class="bank-name">Scotiabank</h3>
+                <p>Compra: 56.75</p>
+                <p>Venta: 57.30</p>
+            </div>
+
+            <div class="bank-card">
+                <h3 class="bank-name">BHD León</h3>
+                <p>Compra: 56.82</p>
+                <p>Venta: 57.38</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 lared809.com. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="actualizador.js"></script>
+</body>
+</html>
