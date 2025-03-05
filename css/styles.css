@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #b3cde0;
+    color: #333;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.page-title {
+    font-size: 1.3rem;
+    margin: 0;
+    flex: 1;
+    text-align: right;
+}
+
+.main-menu {
+    background: #003366;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.main-menu a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+.lottery-nav {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.lottery-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.lottery-nav a {
+    color: #003366;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.lottery-nav a:hover {
+    background-color: #f0f0f0;
+}
+
+.lottery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.lottery-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #b3cde0;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.lottery-logo {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.lottery-content {
+    flex: 1;
+}
+
+.lottery-title {
+    color: #003366;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background: #b3cde0;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.lottery-game {
+    margin-bottom: 0.8rem;
+    padding: 0.5rem;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.game-time {
+    font-size: 0.85rem;
+    color: #003366;
+    font-weight: bold;
+}
+
+.game-status {
+    font-size: 0.75rem;
+    color: #28a745;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.game-name {
+    font-size: 0.9rem;
+    color: #003366;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.numbers-row {
+    display: flex;
+    gap: 0.2rem;
+    margin: 0.2rem 0;
+}
+
+.number {
+    background-color: #f8f9fa;
+    border: 1px solid #003366;
+    border-radius: 50%;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #003366;
+    font-size: 0.85rem;
+}
+
+.schedule {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+.schedule h2 {
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+.schedule-section {
+    margin-bottom: 2rem;
+}
+
+.schedule-section h3 {
+    color: #004080;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.schedule ul {
+    list-style: none;
+}
+
+.schedule li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    border-left: 3px solid #004080;
+}
+
+.disclaimer {
+    background: #fff3cd;
+    color: #856404;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 2rem;
+    border-top: 3px solid #b3cde0;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .page-title {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .site-logo {
+        margin-bottom: 0.5rem;
+    }
+
+    nav ul, .lottery-nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .lottery-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lottery-logo {
+        width: 100px;
+        margin-bottom: 1rem;
+    }
+
+    .numbers-row {
+        justify-content: center;
+    }
+} 
