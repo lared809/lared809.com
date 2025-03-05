@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="lotería dominicana, números ganadores, resultados lotería nacional, leidsa hoy, lotería real, loteka resultados, la primera, lotedom, gana más, pega 3 más, loto pool, quiniela, mega chances, loto 5, king lottery, anguila, sorteos de hoy">
+    <title>Numeros Ganadores y Resultados de la Lotería Nacional, Leidsa, Loteria Real, Loteka y New York - lared809.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #b3cde0;
+            color: #333;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .site-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .page-title {
+            font-size: 1.3rem;
+            margin: 0;
+            flex: 1;
+            text-align: right;
+        }
+
+        .main-menu {
+            background: #003366;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-menu ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .main-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .main-menu a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 1rem 0 2rem 0;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 2rem;
+            border-top: 3px solid #b3cde0;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .page-title {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+
+            .site-logo {
+                margin-bottom: 0.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+
+        /* Estilos específicos de la página de loterías */
+        .lottery-nav {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .lottery-nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        .lottery-nav a {
+            color: #003366;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .lottery-nav a:hover {
+            background-color: #f0f0f0;
+        }
+        .lottery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .lottery-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: 1px solid #b3cde0;
+        }
+        .lottery-logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+        .lottery-title {
+            color: #003366;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            background: #b3cde0;
+            border-radius: 4px;
+        }
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0.5rem 0;
+        }
+        .game-time {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .game-status {
+            font-size: 0.75rem;
+            color: #28a745;
+            font-weight: bold;
+        }
+        .numbers-row {
+            display: flex;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+            flex-wrap: wrap;
+        }
+        .number {
+            background: #f8f9fa;
+            border: 1px solid #003366;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #003366;
+        }
+        .schedule {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-radius: 8px;
+        }
+        .schedule h2 {
+            color: #003366;
+            margin-bottom: 1rem;
+        }
+        .schedule-section {
+            margin-bottom: 2rem;
+        }
+        .schedule-section h3 {
+            color: #004080;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .schedule ul {
+            list-style: none;
+        }
+        .schedule li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid #004080;
+        }
+        .disclaimer {
+            background: #fff3cd;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-content">
+        <span class="site-logo">lared809.com</span>
+        <h1 class="page-title">Loterías</h1>
+    </div>
+
+    <nav class="main-menu">
+        <ul>
+            <li><a href="#nacional">Lotería Nacional</a></li>
+            <li><a href="#leidsa">Leidsa</a></li>
+            <li><a href="#real">Lotería Real</a></li>
+            <li><a href="#loteka">Loteka</a></li>
+            <li><a href="#primera">La Primera</a></li>
+            <li><a href="#suerte">La Suerte</a></li>
+            <li><a href="#lotedom">LoteDom</a></li>
+            <li><a href="#newyork">New York</a></li>
+            <li><a href="#king">King Lottery</a></li>
+            <li><a href="#anguila">Anguila</a></li>
+            <li><a href="#florida">Florida</a></li>
+            <li><a href="#american">American</a></li>
+            <li><a href="#loto5">Loto 5</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <p class="subtitle">Resultados de loterías en vivo y en tiempo real. Consulta los números ganadores de hoy de todas las loterías dominicanas: Lotería Nacional, Leidsa, Lotería Real, Loteka, La Primera, La Suerte, LoteDom y más. Encuentra los últimos resultados del Gana Más, Pega 3 Más, Loto Pool, Quiniela Loteka, Mega Chances, Loto 5, King Lottery y Anguila.</p>
+
+        <div class="lottery-grid">
+            <div class="lottery-card" id="nacional">
+                <img src="https://raw.githubusercontent.com/lared809/images/main/logo-loteria-nacional.png" alt="Lotería Nacional" class="lottery-logo">
+                <div class="lottery-content">
+                    <h2 class="lottery-title">Lotería Nacional</h2>
+                    <div class="game-header">
+                        <span class="game-time">4/03/2025 2:30 PM</span>
+                        <span class="game-status">PENDIENTE</span>
+                    </div>
+                    <div class="game-name">Último Sorteo</div>
+                    <div class="numbers-row">
+                        <span class="number">42</span>
+                        <span class="number">99</span>
+                        <span class="number">85</span>
+                    </div>
+                    <div class="game-name">Gana Más</div>
+                    <div class="numbers-row">
+                        <span class="number">93</span>
+                        <span class="number">33</span>
+                        <span class="number">40</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lottery-card" id="leidsa">
+                <img src="https://raw.githubusercontent.com/lared809/images/main/logo-leidsa.png" alt="Leidsa" class="lottery-logo">
+                <div class="lottery-content">
+                    <h2 class="lottery-title">Leidsa</h2>
+                    <div class="game-header">
+                        <span class="game-time">4/03/2025 8:55 PM</span>
+                        <span class="game-status">PENDIENTE</span>
+                    </div>
+                    <div class="game-name">Último Sorteo</div>
+                    <div class="numbers-row">
+                        <span class="number">31</span>
+                        <span class="number">37</span>
+                        <span class="number">86</span>
+                    </div>
+                    <div class="game-name">Pega 3 Más</div>
+                    <div class="numbers-row">
+                        <span class="number">32</span>
+                        <span class="number">04</span>
+                        <span class="number">34</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lottery-card" id="real">
+                <img src="https://raw.githubusercontent.com/lared809/images/main/logo-loteria-real.png" alt="Lotería Real" class="lottery-logo">
+                <div class="lottery-content">
+                    <h2 class="lottery-title">Lotería Real</h2>
+                    <div class="game-header">
+                        <span class="game-time">4/03/2025 12:55 PM</span>
+                        <span class="game-status">PENDIENTE</span>
+                    </div>
+                    <div class="game-name">Último Sorteo</div>
+                    <div class="numbers-row">
+                        <span class="number">31</span>
+                        <span class="number">36</span>
+                        <span class="number">99</span>
+                    </div>
+                    <div class="game-name">Loto Pool</div>
+                    <div class="numbers-row">
+                        <span class="number">17</span>
+                        <span class="number">48</span>
+                        <span class="number">46</span>
+                        <span class="number">11</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lottery-card" id="loteka">
+                <img src="https://raw.githubusercontent.com/lared809/images/main/logo-loteka.png" alt="Loteka" class="lottery-logo">
+                <div class="lottery-content">
+                    <div class="lottery-title">Loteka</div>
+                    <div class="lottery-game">
+                        <div class="game-header">
+                            <span class="game-time">4/03/2025 12:55 PM</span>
+                            <span class="game-status">PENDIENTE</span>
+                        </div>
+                        <div class="game-name">Quiniela Loteka</div>
+                        <div class="numbers-row">
+                            <span class="number">97</span>
+                            <span class="number">18</span>
+                            <span class="number">93</span>
+                        </div>
+                    </div>
+                    <div class="lottery-game">
+                        <div class="game-header">
+                            <span class="game-time">4/03/2025 12:55 PM</span>
+                            <span class="game-status">PENDIENTE</span>
+                        </div>
+                        <div class="game-name">Mega Chances</div>
+                        <div class="numbers-row">
+                            <span class="number">01</span>
+                            <span class="number">58</span>
+                            <span class="number">98</span>
+                            <span class="number">90</span>
+                            <span class="number">76</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lottery-card" id="primera">
+                <img src="https://raw.githubusercontent.com/lared809/images/main/logo-la-primera.png" alt="La Primera" class="lottery-logo">
+                <div class="lottery-content">
+                    <h2 class="lottery-title">La Primera</h2>
+                    <div class="game-header">
+                        <span class="game-time">4/03/2025 12:30 PM</span>
+                        <span class="game-status">PENDIENTE</span>
+                    </div>
+                    <div class="game-name">Último Sorteo</div>
+                    <div class="numbers-row">
+                        <span class="number">31</span>
+                        <span class="number">36</span>
+                        <span class="number">99</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lottery-card" id="suerte">
+                <img src="https://raw.githubusercontent.com/lared809/images/main/logo-la-suerte.png" alt="La Suerte" class="lottery-logo">
+                <div class="lottery-content">
+                    <h2 class="lottery-title">La Suerte</h2>
+                    <div class="game-header">
+                        <span class="game-time">4/03/2025 1:00 PM</span>
+                        <span class="game-status">PENDIENTE</span>
+                    </div>
+                    <div class="game-name">Último Sorteo</div>
+                    <div class="numbers-row">
+                        <span class="number">45</span>
+                        <span class="number">78</span>
+                        <span class="number">12</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lottery-card" id="lotedom">
+                <img src="https://raw.githubusercontent.com/lared809/images/main/logo-lotedom.png" alt="LoteDom" class="lottery-logo">
+                <div class="lottery-content">
+                    <h2 class="lottery-title">LoteDom</h2>
+                    <div class="game-header">
+                        <span class="game-time">4/03/2025 2:00 PM</span>
+                        <span class="game-status">PENDIENTE</span>
+                    </div>
+                    <div class="game-name">Último Sorteo</div>
+                    <div class="numbers-row">
+                        <span class="number">67</span>
+                        <span class="number">89</span>
+                        <span class="number">23</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lottery-card" id="newyork">
+                <img src="https://raw.githubusercontent.com/lared809/images/main/logo-new-york.png" alt="New York" class="lottery-logo">
+                <div class="lottery-content">
+                    <h2 class="lottery-title">New York</h2>
+                    <div class="game-header">
+                        <span class="game-time">4/03/2025 2:30 PM</span>
+                        <span class="game-status">PENDIENTE</span>
+                    </div>
+                    <div class="game-name">Último Sorteo</div>
+                    <div class="numbers-row">
+                        <span class="number">12</span>
+                        <span class="number">34</span>
+                        <span class="number">56</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lottery-card" id="king">
+                <img src="https://raw.githubusercontent.com/lared809/images/main/logo-king-lottery.png" alt="King Lottery" class="lottery-logo">
+                <div class="lottery-content">
+                    <h2 class="lottery-title">King Lottery</h2>
+                    <div class="game-header">
+                        <span class="game-time">4/03/2025 3:00 PM</span>
+                        <span class="game-status">PENDIENTE</span>
+                    </div>
+                    <div class="game-name">Último Sorteo</div>
+                    <div class="numbers-row">
+                        <span class="number">90</span>
+                        <span class="number">45</span>
+                        <span class="number">78</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lottery-card" id="anguila">
+                <img src="https://raw.githubusercontent.com/lared809/images/main/logo-anguila.png" alt="Anguila" class="lottery-logo">
+                <div class="lottery-content">
+                    <h2 class="lottery-title">Anguila</h2>
+                    <div class="game-header">
+                        <span class="game-time">4/03/2025 3:30 PM</span>
+                        <span class="game-status">PENDIENTE</span>
+                    </div>
+                    <div class="game-name">Último Sorteo</div>
+                    <div class="numbers-row">
+                        <span class="number">11</span>
+                        <span class="number">22</span>
+                        <span class="number">33</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lottery-card" id="florida">
+                <img src="https://raw.githubusercontent.com/lared809/images/main/logo-florida.png" alt="Florida" class="lottery-logo">
+                <div class="lottery-content">
+                    <h2 class="lottery-title">Florida</h2>
+                    <div class="game-header">
+                        <span class="game-time">4/03/2025 1:30 PM</span>
+                        <span class="game-status">PENDIENTE</span>
+                    </div>
+                    <div class="game-name">Último Sorteo</div>
+                    <div class="numbers-row">
+                        <span class="number">24</span>
+                        <span class="number">57</span>
+                        <span class="number">89</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lottery-card" id="american">
+                <img src="https://raw.githubusercontent.com/lared809/images/main/logo-american.png" alt="American" class="lottery-logo">
+                <div class="lottery-content">
+                    <h2 class="lottery-title">American</h2>
+                    <div class="game-header">
+                        <span class="game-time">4/03/2025 4:00 PM</span>
+                        <span class="game-status">PENDIENTE</span>
+                    </div>
+                    <div class="game-name">Último Sorteo</div>
+                    <div class="numbers-row">
+                        <span class="number">13</span>
+                        <span class="number">47</span>
+                        <span class="number">82</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lottery-card" id="loto5">
+                <img src="https://raw.githubusercontent.com/lared809/images/main/logo-loto5.png" alt="Loto 5" class="lottery-logo">
+                <div class="lottery-content">
+                    <h2 class="lottery-title">Loto 5</h2>
+                    <div class="game-header">
+                        <span class="game-time">4/03/2025 8:30 PM</span>
+                        <span class="game-status">PENDIENTE</span>
+                    </div>
+                    <div class="game-name">Último Sorteo</div>
+                    <div class="numbers-row">
+                        <span class="number">07</span>
+                        <span class="number">15</span>
+                        <span class="number">23</span>
+                        <span class="number">31</span>
+                        <span class="number">42</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="schedule">
+            <h2>Horarios de Sorteos</h2>
+            <div class="schedule-section">
+                <ul>
+                    <li>Lotería Nacional: 2:30 PM y 9:00 PM (6:00 PM domingos)</li>
+                    <li>Leidsa: 8:55 PM (3:55 PM domingos)</li>
+                    <li>Lotería Real: 12:55 PM</li>
+                    <li>Loteka: 7:55 PM</li>
+                    <li>La Primera: 12:30 PM</li>
+                    <li>La Suerte: 1:00 PM</li>
+                    <li>LoteDom: 2:00 PM</li>
+                    <li>New York: 2:30 PM y 10:30 PM</li>
+                    <li>King Lottery: 10:00 AM, 3:00 PM y 8:00 PM</li>
+                    <li>Anguila: 11:00 AM y 3:30 PM</li>
+                    <li>Florida: 1:30 PM y 7:30 PM</li>
+                    <li>American: 4:00 PM y 9:00 PM</li>
+                    <li>Loto 5: 8:30 PM (miércoles y sábados)</li>
+                </ul>
+            </div>
+
+            <div class="schedule-section">
+                <h3>Sorteos Millonarios</h3>
+                <ul>
+                    <li>Loto Más de Leidsa: 8:55 PM miércoles y sábados</li>
+                    <li>Mega Lotto de Loteka: 7:55 PM lunes y jueves</li>
+                    <li>Loto Real: 12:55 PM martes y viernes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <p>Nota: Los resultados son solo informativos. Verifique siempre con la fuente oficial. Los horarios de los sorteos pueden variar los días festivos.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 lared809.com. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        // Función para formatear la fecha
+        function formatDate(date) {
+            return date.toLocaleDateString('es-DO', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+        }
+
+        // Función para formatear la hora
+        function formatTime(date) {
+            return date.toLocaleTimeString('es-DO', {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        // Función para actualizar los números de una lotería específica
+        async function updateLotteryNumbers(lotteryId) {
+            try {
+                const response = await fetch(`https://api.ejemplo.com/loterias/${lotteryId}`);
+                const data = await response.json();
+                
+                const lotteryCard = document.getElementById(lotteryId);
+                if (lotteryCard) {
+                    const numbersRow = lotteryCard.querySelector('.numbers-row');
+                    const gameTime = lotteryCard.querySelector('.game-time');
+                    const gameStatus = lotteryCard.querySelector('.game-status');
+                    
+                    if (data.numbers && data.numbers.length > 0) {
+                        numbersRow.innerHTML = '';
+                        data.numbers.forEach(number => {
+                            numbersRow.innerHTML += `<span class="number">${number}</span>`;
+                        });
+                        
+                        const drawDate = new Date(data.drawTime);
+                        gameTime.textContent = `${formatDate(drawDate)} ${formatTime(drawDate)}`;
+                        gameStatus.textContent = data.status;
+                        gameStatus.style.color = data.status === 'PENDIENTE' ? '#28a745' : '#dc3545';
+                    }
+                }
+            } catch (error) {
+                console.error(`Error actualizando ${lotteryId}:`, error);
+            }
+        }
+
+        // Función para actualizar todas las loterías
+        async function updateAllLotteries() {
+            const lotteries = [
+                'nacional', 'leidsa', 'real', 'loteka', 'primera', 
+                'suerte', 'lotedom', 'newyork', 'king', 'anguila',
+                'florida', 'american', 'loto5'
+            ];
+            
+            for (const lottery of lotteries) {
+                await updateLotteryNumbers(lottery);
+            }
+        }
+
+        // Función para verificar si es hora de un sorteo
+        function checkDrawTimes() {
+            const now = new Date();
+            const schedules = {
+                'nacional': ['14:30', '21:00'],
+                'leidsa': ['20:55'],
+                'real': ['12:55'],
+                'loteka': ['19:55'],
+                'primera': ['12:30'],
+                'suerte': ['13:00'],
+                'lotedom': ['14:00'],
+                'newyork': ['14:30', '22:30'],
+                'king': ['10:00', '15:00', '20:00'],
+                'anguila': ['11:00', '15:30'],
+                'florida': ['13:30', '19:30'],
+                'american': ['16:00', '21:00'],
+                'loto5': ['20:30']
+            };
+
+            for (const [lottery, times] of Object.entries(schedules)) {
+                times.forEach(time => {
+                    const [hours, minutes] = time.split(':');
+                    if (now.getHours() === parseInt(hours) && 
+                        now.getMinutes() === parseInt(minutes)) {
+                        updateLotteryNumbers(lottery);
+                    }
+                });
+            }
+        }
+
+        // Inicializar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            // Actualizar números al cargar
+            updateAllLotteries();
+            
+            // Verificar horarios cada minuto
+            setInterval(checkDrawTimes, 60000);
+            
+            // Recargar la página cada 5 minutos
+            setInterval(() => {
+                updateAllLotteries();
+            }, 300000);
+        });
+    </script>
+</body>
+</html> 
