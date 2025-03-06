@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data: blob: https://raw.githubusercontent.com; font-src 'self' https: data:;">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <link rel="canonical" href="https://lared809.github.io/" />
+    <meta name="keywords" content="lotería dominicana, números ganadores, resultados lotería nacional, leidsa hoy, lotería real, loteka resultados, la primera, lotedom, gana más, pega 3 más, loto pool, quiniela, mega chances, loto 5, king lottery, anguila, sorteos de hoy">
+    <title>Numeros Ganadores y Resultados de la Lotería Nacional, Leidsa, Loteria Real, Loteka y New York - lared809.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: #003366;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: 60px;
+        }
+
+        .site-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            white-space: nowrap;
+            margin-left: 50px;
+        }
+
+        .page-title {
+            display: none;
+        }
+
+        .main-menu {
+            display: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 1rem 0 2rem 0;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 2rem;
+            border-top: 3px solid #b3cde0;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .page-title {
+                font-size: 1.2rem;
+                text-align: center;
+            }
+
+            .site-logo {
+                margin-bottom: 0.5rem;
+            }
+
+            .main-menu {
+                display: none;
+            }
+            
+            .sidebar {
+                display: block;
+            }
+        }
+
+        /* Estilos específicos de la página de loterías */
+        .lottery-nav {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .lottery-nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        .lottery-nav a {
+            color: #003366;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .lottery-nav a:hover {
+            background-color: #f0f0f0;
+        }
+        .lottery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .lottery-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border: 1px solid #b3cde0;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .lottery-logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+        .lottery-title {
+            font-size: 1.2rem;
+            color: #003366;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        .game-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            background: #ffffff;
+        }
+        .game-name {
+            font-weight: bold;
+            color: #003366;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+        }
+        .numbers-row {
+            display: flex;
+            gap: 0.25rem;
+            margin: 0;
+            flex-wrap: nowrap;
+        }
+        .number {
+            background: #ffffff;
+            border: 1px solid #003366;
+            border-radius: 50%;
+            width: 1.8rem;
+            height: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #003366;
+            font-size: 0.9rem;
+        }
+        .schedule {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-radius: 8px;
+        }
+        .schedule h2 {
+            color: #003366;
+            margin-bottom: 1rem;
+        }
+        .schedule-section {
+            margin-bottom: 2rem;
+        }
+        .schedule-section h3 {
+            color: #004080;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .schedule ul {
+            list-style: none;
+        }
+        .schedule li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid #004080;
+        }
+        .disclaimer {
+            background: #fff3cd;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Estilos para la sección de anuncios */
+        .ad-section {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem auto;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .ad-section {
+                min-height: 50px;
+                margin: 0.5rem;
+            }
+        }
+
+        /* Estilos para el menú lateral */
+        .sidebar {
+            position: fixed;
+            left: -280px;
+            top: 60px;
+            width: 280px;
+            height: calc(100% - 60px);
+            background: #003366;
+            transition: 0.3s;
+            z-index: 1001;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+        }
+
+        .sidebar.active {
+            left: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar li {
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .menu-toggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1002;
+            background: transparent;
+            color: white;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            font-size: 24px;
+            display: block;
+        }
+
+        .content-wrapper {
+            padding-top: 70px;
+            transition: 0.3s;
+        }
+
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
+
+            .main-menu {
+                display: block;
+                background: #003366;
+                padding: 0;
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                z-index: 999;
+            }
+
+            .main-menu ul {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                padding: 10px 0;
+                margin: 0 auto;
+                max-width: 1200px;
+                list-style: none;
+            }
+
+            .main-menu a {
+                color: white;
+                text-decoration: none;
+                padding: 5px 15px;
+                border-radius: 4px;
+                transition: background-color 0.3s;
+                font-size: 14px;
+            }
+
+            .main-menu a:hover {
+                background-color: rgba(255,255,255,0.1);
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .content-wrapper {
+                padding-top: 120px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                justify-content: center;
+            }
+
+            .site-logo {
+                margin-left: 30px;
+                font-size: 1.4rem;
+            }
+
+            .sidebar {
+                padding-top: 0;
+                display: block;
+            }
+
+            .content-wrapper {
+                padding-top: 70px;
+            }
+
+            .main-menu {
+                display: none;
+            }
+        }
+
+        .lottery-content {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-content">
+        <button class="menu-toggle">☰</button>
+        <span class="site-logo">lared809.com</span>
+        <h1 class="page-title">Loterías</h1>
+    </div>
+
+    <nav class="main-menu">
+        <ul>
+            <li><a href="#nacional">Lotería Nacional</a></li>
+            <li><a href="#leidsa">Leidsa</a></li>
+            <li><a href="#real">Lotería Real</a></li>
+            <li><a href="#loteka">Loteka</a></li>
+            <li><a href="#primera">La Primera</a></li>
+            <li><a href="#suerte">La Suerte</a></li>
+            <li><a href="#lotedom">LoteDom</a></li>
+            <li><a href="#newyork">New York</a></li>
+            <li><a href="#king">King Lottery</a></li>
+            <li><a href="#anguila">Anguila</a></li>
+            <li><a href="#florida">Florida</a></li>
+            <li><a href="#american">American</a></li>
+            <li><a href="#loto5">Loto 5</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="container">
+            <p class="subtitle">Resultados de loterías en vivo y en tiempo real. Consulta los números ganadores de hoy de todas las loterías dominicanas: Lotería Nacional, Leidsa, Lotería Real, Loteka, La Primera, La Suerte, LoteDom y más. Encuentra los últimos resultados del Gana Más, Pega 3 Más, Loto Pool, Quiniela Loteka, Mega Chances, Loto 5, King Lottery y Anguila.</p>
+
+            <div class="lottery-grid">
+                <div class="lottery-card" id="nacional">
+                    <img src="https://cdn-lottery.kiskoo.com/loterias-dominicanas/loteria-nacional.png" alt="Lotería Nacional" class="lottery-logo" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <div class="lottery-content">
+                        <h3 class="lottery-title">Nacional</h3>
+                        <div class="game-section">
+                            <div class="game-name">Juega + Pega +</div>
+                            <div class="numbers-row">
+                                <span class="number">09</span>
+                                <span class="number">20</span>
+                                <span class="number">12</span>
+                                <span class="number">09</span>
+                                <span class="number">26</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Gana Más</div>
+                            <div class="numbers-row">
+                                <span class="number">00</span>
+                                <span class="number">78</span>
+                                <span class="number">87</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Lotería Nacional</div>
+                            <div class="numbers-row">
+                                <span class="number">97</span>
+                                <span class="number">14</span>
+                                <span class="number">57</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lottery-card" id="leidsa">
+                    <img src="https://nuevodiario-assets.s3.us-east-2.amazonaws.com/wp-content/uploads/2025/01/20184202/XBFLW5OO4VGABNKCNV6HQD6MEE.jpg" alt="Leidsa" class="lottery-logo" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <div class="lottery-content">
+                        <h3 class="lottery-title">Leidsa</h3>
+                        <div class="game-section">
+                            <div class="game-name">Pega 3 Más</div>
+                            <div class="numbers-row">
+                                <span class="number">27</span>
+                                <span class="number">35</span>
+                                <span class="number">01</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Loto Pool</div>
+                            <div class="numbers-row">
+                                <span class="number">03</span>
+                                <span class="number">11</span>
+                                <span class="number">18</span>
+                                <span class="number">29</span>
+                                <span class="number">31</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Super Kino TV</div>
+                            <div class="numbers-row">
+                                <span class="number">06</span>
+                                <span class="number">17</span>
+                                <span class="number">19</span>
+                                <span class="number">20</span>
+                                <span class="number">21</span>
+                                <span class="number">33</span>
+                                <span class="number">36</span>
+                                <span class="number">45</span>
+                                <span class="number">46</span>
+                                <span class="number">51</span>
+                                <span class="number">54</span>
+                                <span class="number">56</span>
+                                <span class="number">57</span>
+                                <span class="number">58</span>
+                                <span class="number">62</span>
+                                <span class="number">63</span>
+                                <span class="number">70</span>
+                                <span class="number">72</span>
+                                <span class="number">76</span>
+                                <span class="number">80</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Quiniela Leidsa</div>
+                            <div class="numbers-row">
+                                <span class="number">75</span>
+                                <span class="number">93</span>
+                                <span class="number">95</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Loto - Loto Más</div>
+                            <div class="numbers-row">
+                                <span class="number">02</span>
+                                <span class="number">13</span>
+                                <span class="number">16</span>
+                                <span class="number">17</span>
+                                <span class="number">18</span>
+                                <span class="number">19</span>
+                                <span class="number">01</span>
+                                <span class="number">06</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lottery-card" id="real">
+                    <img src="https://cdn-lottery.kiskoo.com/loterias-dominicanas/quiniela-real.png" alt="Lotería Real" class="lottery-logo" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <div class="lottery-content">
+                        <h3 class="lottery-title">Real</h3>
+                        <div class="game-section">
+                            <div class="game-name">Quiniela Real</div>
+                            <div class="numbers-row">
+                                <span class="number">10</span>
+                                <span class="number">36</span>
+                                <span class="number">70</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Loto Pool Real</div>
+                            <div class="numbers-row">
+                                <span class="number">36</span>
+                                <span class="number">87</span>
+                                <span class="number">64</span>
+                                <span class="number">09</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Loto Real</div>
+                            <div class="numbers-row">
+                                <span class="number">04</span>
+                                <span class="number">14</span>
+                                <span class="number">18</span>
+                                <span class="number">19</span>
+                                <span class="number">34</span>
+                                <span class="number">37</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lottery-card" id="loteka">
+                    <img src="https://cdn-lottery.kiskoo.com/loterias-dominicanas/quiniela-loteka.png" alt="Loteka" class="lottery-logo" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <div class="lottery-content">
+                        <h3 class="lottery-title">Loteka</h3>
+                        <div class="game-section">
+                            <div class="game-name">Quiniela Loteka</div>
+                            <div class="numbers-row">
+                                <span class="number">25</span>
+                                <span class="number">48</span>
+                                <span class="number">96</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Mega Chances</div>
+                            <div class="numbers-row">
+                                <span class="number">14</span>
+                                <span class="number">28</span>
+                                <span class="number">42</span>
+                                <span class="number">56</span>
+                                <span class="number">70</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Super Pale</div>
+                            <div class="numbers-row">
+                                <span class="number">25</span>
+                                <span class="number">48</span>
+                                <span class="number">96</span>
+                                <span class="number">70</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lottery-card" id="primera">
+                    <img src="https://cdn-lottery.kiskoo.com/loterias-dominicanas/primera-dia.png" alt="La Primera" class="lottery-logo" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <div class="lottery-content">
+                        <h3 class="lottery-title">La Primera</h3>
+                        <div class="game-section">
+                            <div class="game-name">Primera Día</div>
+                            <div class="numbers-row">
+                                <span class="number">16</span>
+                                <span class="number">32</span>
+                                <span class="number">48</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Primera Noche</div>
+                            <div class="numbers-row">
+                                <span class="number">25</span>
+                                <span class="number">50</span>
+                                <span class="number">75</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lottery-card" id="suerte">
+                    <img src="https://cdn-lottery.kiskoo.com/loterias-dominicanas/la-suerte-medio-dia.png" alt="La Suerte" class="lottery-logo" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <div class="lottery-content">
+                        <h3 class="lottery-title">La Suerte</h3>
+                        <div class="game-section">
+                            <div class="game-name">La Suerte Día</div>
+                            <div class="numbers-row">
+                                <span class="number">19</span>
+                                <span class="number">38</span>
+                                <span class="number">57</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">La Suerte Noche</div>
+                            <div class="numbers-row">
+                                <span class="number">33</span>
+                                <span class="number">66</span>
+                                <span class="number">99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lottery-card" id="lotedom">
+                    <img src="https://cdn-lottery.kiskoo.com/loterias-dominicanas/quiniela-lotedom.png" alt="LoteDom" class="lottery-logo" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <div class="lottery-content">
+                        <h3 class="lottery-title">LoteDom</h3>
+                        <div class="game-section">
+                            <div class="game-name">Quiniela LoteDom</div>
+                            <div class="numbers-row">
+                                <span class="number">21</span>
+                                <span class="number">42</span>
+                                <span class="number">63</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Pale LoteDom</div>
+                            <div class="numbers-row">
+                                <span class="number">21</span>
+                                <span class="number">42</span>
+                                <span class="number">63</span>
+                                <span class="number">84</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lottery-card" id="newyork">
+                    <img src="https://cdn-lottery.kiskoo.com/loterias-dominicanas/new-york-tarde.png" alt="New York" class="lottery-logo" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <div class="lottery-content">
+                        <h3 class="lottery-title">New York</h3>
+                        <div class="game-section">
+                            <div class="game-name">New York Tarde</div>
+                            <div class="numbers-row">
+                                <span class="number">24</span>
+                                <span class="number">48</span>
+                                <span class="number">72</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">New York Noche</div>
+                            <div class="numbers-row">
+                                <span class="number">11</span>
+                                <span class="number">22</span>
+                                <span class="number">33</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lottery-card" id="king">
+                    <img src="https://cdn-lottery.kiskoo.com/loterias-dominicanas/quiniela-king-lottery-dia.png" alt="King Lottery" class="lottery-logo" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <div class="lottery-content">
+                        <h3 class="lottery-title">King Lottery</h3>
+                        <div class="game-section">
+                            <div class="game-name">King Lottery Día</div>
+                            <div class="numbers-row">
+                                <span class="number">27</span>
+                                <span class="number">54</span>
+                                <span class="number">81</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">King Lottery Tarde</div>
+                            <div class="numbers-row">
+                                <span class="number">39</span>
+                                <span class="number">78</span>
+                                <span class="number">17</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">King Lottery Noche</div>
+                            <div class="numbers-row">
+                                <span class="number">45</span>
+                                <span class="number">90</span>
+                                <span class="number">35</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lottery-card" id="anguila">
+                    <img src="https://cdn-lottery.kiskoo.com/loterias-dominicanas/anguila-10am.png" alt="Anguila" class="lottery-logo" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <div class="lottery-content">
+                        <h3 class="lottery-title">Anguila</h3>
+                        <div class="game-section">
+                            <div class="game-name">Anguila 10:30 AM</div>
+                            <div class="numbers-row">
+                                <span class="number">30</span>
+                                <span class="number">60</span>
+                                <span class="number">90</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Anguila 2:30 PM</div>
+                            <div class="numbers-row">
+                                <span class="number">15</span>
+                                <span class="number">45</span>
+                                <span class="number">75</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lottery-card" id="florida">
+                    <img src="https://cdn-lottery.kiskoo.com/loterias-dominicanas/loteria-florida-noche.png" alt="Florida" class="lottery-logo" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <div class="lottery-content">
+                        <h3 class="lottery-title">Florida</h3>
+                        <div class="game-section">
+                            <div class="game-name">Florida Día</div>
+                            <div class="numbers-row">
+                                <span class="number">33</span>
+                                <span class="number">66</span>
+                                <span class="number">99</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">Florida Noche</div>
+                            <div class="numbers-row">
+                                <span class="number">12</span>
+                                <span class="number">34</span>
+                                <span class="number">56</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lottery-card" id="american">
+                    <img src="https://cdn-lottery.kiskoo.com/loterias-dominicanas/american-dia.png" alt="American" class="lottery-logo" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <div class="lottery-content">
+                        <h3 class="lottery-title">American</h3>
+                        <div class="game-section">
+                            <div class="game-name">American Día</div>
+                            <div class="numbers-row">
+                                <span class="number">36</span>
+                                <span class="number">72</span>
+                                <span class="number">18</span>
+                            </div>
+                        </div>
+                        <div class="game-section">
+                            <div class="game-name">American Noche</div>
+                            <div class="numbers-row">
+                                <span class="number">27</span>
+                                <span class="number">54</span>
+                                <span class="number">81</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lottery-card" id="loto5">
+                    <img src="https://cdn-lottery.kiskoo.com/loterias-dominicanas/loto-5-dia.png" alt="Loto 5" class="lottery-logo" crossorigin="anonymous" referrerpolicy="no-referrer">
+                    <div class="lottery-content">
+                        <h3 class="lottery-title">Loto 5</h3>
+                        <div class="game-section">
+                            <div class="game-name">Último Sorteo</div>
+                            <div class="numbers-row">
+                                <span class="number">05</span>
+                                <span class="number">15</span>
+                                <span class="number">25</span>
+                                <span class="number">35</span>
+                                <span class="number">45</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="schedule">
+                <h2>Horarios de Sorteos</h2>
+                <div class="schedule-section">
+                    <ul>
+                        <li>Lotería Nacional: 2:30 PM y 9:00 PM (6:00 PM domingos)</li>
+                        <li>Leidsa: 8:55 PM (3:55 PM domingos)</li>
+                        <li>Lotería Real: 12:55 PM</li>
+                        <li>Loteka: 7:55 PM</li>
+                        <li>La Primera: 12:30 PM</li>
+                        <li>La Suerte: 1:00 PM</li>
+                        <li>LoteDom: 2:00 PM</li>
+                        <li>New York: 2:30 PM y 10:30 PM</li>
+                        <li>King Lottery: 10:00 AM, 3:00 PM y 8:00 PM</li>
+                        <li>Anguila: 11:00 AM y 3:30 PM</li>
+                        <li>Florida: 1:30 PM y 7:30 PM</li>
+                        <li>American: 4:00 PM y 9:00 PM</li>
+                        <li>Loto 5: 8:30 PM (miércoles y sábados)</li>
+                    </ul>
+                </div>
+
+                <div class="schedule-section">
+                    <h3>Sorteos Millonarios</h3>
+                    <ul>
+                        <li>Loto Más de Leidsa: 8:55 PM miércoles y sábados</li>
+                        <li>Mega Lotto de Loteka: 7:55 PM lunes y jueves</li>
+                        <li>Loto Real: 12:55 PM martes y viernes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <p>Nota: Los resultados son solo informativos. Verifique siempre con la fuente oficial. Los horarios de los sorteos pueden variar los días festivos.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 lared809.com. Todos los derechos reservados.</p>
+    </footer>
+    <script src="api.js"></script>
+    <script>
+        // Configuración de la actualización
+        const UPDATE_INTERVAL = 60000; // Actualizar cada minuto
+        const API_URL = 'https://www.conectate.com.do/loterias/';
+        
+        // Función para obtener los resultados
+        async function obtenerResultados() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) throw new Error('Error al obtener resultados');
+                const text = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+                return extraerResultados(doc);
+            } catch (error) {
+                console.error('Error al obtener resultados:', error);
+                return null;
+            }
+        }
+
+        // Función para extraer los resultados del HTML
+        function extraerResultados(doc) {
+            const resultados = {};
+            
+            // Mapeo de nombres de loterías
+            const mapeoLoterias = {
+                'nacional': ['Juega + Pega +', 'Gana Más', 'Lotería Nacional'],
+                'leidsa': ['Pega 3 Más', 'Loto Pool', 'Super Kino TV', 'Quiniela Leidsa', 'Loto - Loto Más'],
+                'real': ['Quiniela Real', 'Loto Pool Real', 'Loto Real'],
+                'loteka': ['Quiniela Loteka', 'Mega Chances', 'Super Pale'],
+                'primera': ['Primera Día', 'Primera Noche'],
+                'suerte': ['La Suerte Día', 'La Suerte Noche'],
+                'lotedom': ['Quiniela LoteDom', 'Pale LoteDom'],
+                'newyork': ['New York Tarde', 'New York Noche'],
+                'florida': ['Florida Día', 'Florida Noche'],
+                'anguila': ['Anguila 10:30 AM', 'Anguila 2:30 PM'],
+                'american': ['American Día', 'American Noche'],
+                'king': ['King Lottery Día', 'King Lottery Tarde', 'King Lottery Noche']
+            };
+
+            // Extraer resultados para cada lotería
+            doc.querySelectorAll('.lottery-card').forEach(card => {
+                const loteriaId = card.id;
+                if (!loteriaId || !mapeoLoterias[loteriaId]) return;
+
+                resultados[loteriaId] = {};
+                mapeoLoterias[loteriaId].forEach(juego => {
+                    const seccionJuego = card.querySelector(`[data-game="${juego}"]`);
+                    if (seccionJuego) {
+                        const numeros = Array.from(seccionJuego.querySelectorAll('.number'))
+                            .map(num => num.textContent.trim())
+                            .filter(num => num);
+                        if (numeros.length > 0) {
+                            resultados[loteriaId][juego] = numeros;
+                        }
+                    }
+                });
+            });
+
+            return resultados;
+        }
+
+        // Función para actualizar los números en la interfaz
+        function actualizarNumeros(resultados) {
+            if (!resultados) return;
+
+            Object.entries(resultados).forEach(([loteriaId, juegos]) => {
+                const card = document.querySelector(`#${loteriaId}`);
+                if (!card) return;
+
+                Object.entries(juegos).forEach(([nombreJuego, numeros]) => {
+                    const seccionJuego = card.querySelector(`.game-section:has(.game-name:contains("${nombreJuego}"))`);
+                    if (seccionJuego && numeros.length > 0) {
+                        const numbersContainer = seccionJuego.querySelector('.numbers-row');
+                        if (numbersContainer) {
+                            numbersContainer.innerHTML = numeros
+                                .map(num => `<span class="number">${String(num).padStart(2, '0')}</span>`)
+                                .join('');
+                        }
+                    }
+                });
+            });
+        }
+
+        // Función principal de actualización
+        async function actualizarResultados() {
+            console.log('Verificando nuevos resultados...');
+            const resultados = await obtenerResultados();
+            if (resultados) {
+                actualizarNumeros(resultados);
+                console.log('Resultados actualizados');
+            }
+        }
+
+        // Inicializar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            // Actualización inicial
+            actualizarResultados();
+
+            // Configurar actualizaciones periódicas
+            setInterval(actualizarResultados, UPDATE_INTERVAL);
+
+            // Mantener funcionalidad del menú
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            const contentWrapper = document.querySelector('.content-wrapper');
+
+            if (menuToggle && sidebar && contentWrapper) {
+                menuToggle.addEventListener('click', () => {
+                    sidebar.classList.toggle('active');
+                    contentWrapper.classList.toggle('shifted');
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
